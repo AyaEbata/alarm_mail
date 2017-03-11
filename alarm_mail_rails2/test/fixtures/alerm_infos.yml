@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  kaisha_mail: MyString
+  alerm_time: 2017-03-11 13:30:33
+  iiwake: MyText
+
+two:
+  user_name: MyString
+  kaisha_mail: MyString
+  alerm_time: 2017-03-11 13:30:33
+  iiwake: MyText
