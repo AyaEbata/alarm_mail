@@ -6,6 +6,10 @@
     var mail_timer_id;
     var audio;
 
+    $(function(){
+      setNowTime();
+    });
+
     function setNowTime()
     {
         var date = new Date();
@@ -58,6 +62,7 @@
         // mail API叩く
         console.log('sendMail');
         audio.pause();
+        location.href('http://localhost:3000/rails/mailers/post_mailer/account_activation');
     }
 
     function stopAlerm()
@@ -72,7 +77,6 @@
       return ('00' + num).slice(-2);
     }
 </script>
-<body onload="setNowTime()">
 <div class="title-container">
   <div id="glasses-img"></div>
   <div id="title-img"></div>
