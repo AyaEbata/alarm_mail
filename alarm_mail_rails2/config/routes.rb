@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get 'send_mails/send', to:'send_mails#index'
   resources :alerm_infos
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
