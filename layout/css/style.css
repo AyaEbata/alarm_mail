@@ -2,6 +2,13 @@ body {
     font-size: 60px;
 }
 
+#screen-transition-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* index page style */
 .title-container {
     margin: 0 auto;
     width: 600px;
@@ -28,13 +35,6 @@ body {
     width: 80px;
     height: 60px;
     font-size: 50px;
-    float: left;
-}
-
-#time {
-    float: left;
-    padding: 15px;
-    margin-top: -30px
 }
 
 #set {
@@ -49,5 +49,19 @@ body {
 
 .container {
     text-align: center;
-    clear: both;
+}
+
+/* settings page style */
+#setting-page {
+    font-size: 20px;
+    text-align: center;
+}
+
+#settings-title {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.form-container {
+    margin-top: 30px;
 }
