@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <title>あぁ…休みてぇ…</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <input type="text" name="hour" /> :
-  <input type="text" name="minute" />
-  <!-- ここに出力 -->
-  <div class="time">07:00</div>
-  <input type="submit" name="stop" value="stop" />
+  <div class="title-container">
+    <div id="glasses-img"></div>
+    <div id="title-img"></div>
+  </div>
+  <div class="time-container">
+    <input type="text" name="hour" id="hour" class="form-control" />
+    <div id="time">:</div>
+    <input type="text" name="minute" id="minute" class="form-control" />
+  </div>
+  <div class="container">
+    <input type="submit" name="set" id="set" value="set" class="btn btn-default" />
+    <div>07:00</div><!-- TODO ここに出力 -->
+    <input type="submit" name="stop" id="stop" value="stop" class="btn btn-default" />
+  </div>
 </body>
 </html>
