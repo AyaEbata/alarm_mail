@@ -77,13 +77,14 @@
       return ('00' + num).slice(-2);
     }
 </script>
+<a href="/settings" class="btn btn-default" id="screen-transition-btn">せっていをする</a>
 <div class="title-container">
   <div id="glasses-img"></div>
   <div id="title-img"></div>
 </div>
-<div class="time-container">
-  <input type="text" name="hour" id="hour" class="form-control" value="<%= @alertInfo.alerm_time.strftime('%H') %>"  />
-  <div id="time">:</div>
+<div class="form-inline time-container">
+  <input type="text" name="hour" id="hour" class="form-control" value="<%= @alertInfo.alerm_time.strftime('%H') %>" />
+  <label>:</label>
   <input type="text" name="minute" id="minute" class="form-control" value="<%= @alertInfo.alerm_time.strftime('%M') %>" />
 </div>
 <div class="container">
@@ -91,4 +92,3 @@
   <div class="time">00:00</div>
   <input type="submit" name="stop" id="stop" value="stop" class="btn btn-default" onclick="stopAlerm()" />
 </div>
-
