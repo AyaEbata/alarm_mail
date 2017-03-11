@@ -11,7 +11,8 @@
         var date = new Date();
         var hour = date.getHours();
         var minute = date.getMinutes();
-        $(".time").html(hour + ":" + minute);
+        $("#hour").val(zero_padidng(hour));
+        $("#minute").val(zero_padidng(minute));
     }
 
     function setAlerm()
@@ -19,7 +20,7 @@
         var hour = $("#hour").val();
         var minute = $("#minute").val();
 
-        $(".time").html(hour + ":" + minute);
+        $(".time").html(zero_padidng(hour) + ":" + zero_padidng(minute));
         setTimeout('checkTime()',3000)
     }
 
@@ -65,6 +66,11 @@
         clearTimeout(mail_timer_id);
         audio.pause();
     }
+
+    function zero_padidng(num)
+    {
+      return ('00' + num).slice(-2);
+    }
 </script>
 <body onload="setNowTime()">
 <div class="title-container">
@@ -78,7 +84,7 @@
 </div>
 <div class="container">
   <input type="submit" name="set" id="set" value="set" class="btn btn-default" onclick="setAlerm()" />
-  <div class="time"></div>
+  <div class="time">00:00</div>
   <input type="submit" name="stop" id="stop" value="stop" class="btn btn-default" onclick="stopAlerm()" />
 </div>
 
