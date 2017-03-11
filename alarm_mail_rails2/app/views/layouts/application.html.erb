@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AlarmMailRails2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="UTF-8" />
+    <title>あぁ…休みてぇ…</title>
+
+  </head>
+
+  <body onload="setNowTime()">
+
+    <%= yield %>
+
+
+    <span style="font-size:15px;">
+      <%= link_to "メイン画面", root_path %>
+      <%= link_to "設定画面", alerm_infos_path %>
+      <%= link_to "メールサンプル", 'http://localhost:3000/rails/mailers/post_mailer/account_activation' %>
+    </span>
+
+  </body>
+</html>

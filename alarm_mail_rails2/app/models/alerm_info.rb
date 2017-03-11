@@ -1,0 +1,2 @@
+class AlermInfo < ApplicationRecord
+end

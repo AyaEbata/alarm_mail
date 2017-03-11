@@ -1,0 +1,37 @@
+<%= form_for(alerm_info) do |f| %>
+  <% if alerm_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alerm_info.errors.count, "error") %> prohibited this alerm_info from being saved:</h2>
+
+      <ul>
+      <% alerm_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kaisha_mail %>
+    <%= f.text_field :kaisha_mail %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alerm_time %>
+    <%= f.time_select :alerm_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iiwake %>
+    <%= f.text_area :iiwake %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

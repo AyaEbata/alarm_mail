@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alerm Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Kaisha mail</th>
+      <th>Alerm time</th>
+      <th>Iiwake</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alerm_infos.each do |alerm_info| %>
+      <tr>
+        <td><%= alerm_info.user_name %></td>
+        <td><%= alerm_info.kaisha_mail %></td>
+        <td><%= alerm_info.alerm_time.strftime('%H:%M:%S') %></td>
+        <td><%= alerm_info.iiwake %></td>
+        <td><%= link_to 'Show', alerm_info %></td>
+        <td><%= link_to 'Edit', edit_alerm_info_path(alerm_info) %></td>
+        <td><%= link_to 'Destroy', alerm_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alerm Info', new_alerm_info_path %>
+<br>
+<br>

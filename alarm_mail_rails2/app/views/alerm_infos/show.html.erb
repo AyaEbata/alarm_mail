@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @alerm_info.user_name %>
+</p>
+
+<p>
+  <strong>Kaisha mail:</strong>
+  <%= @alerm_info.kaisha_mail %>
+</p>
+
+<p>
+  <strong>Alerm time:</strong>
+  <%= @alerm_info.alerm_time %>
+</p>
+
+<p>
+  <strong>Iiwake:</strong>
+  <%= @alerm_info.iiwake %>
+</p>
+
+<%= link_to 'Edit', edit_alerm_info_path(@alerm_info) %> |
+<%= link_to 'Back', alerm_infos_path %>

@@ -1,0 +1,53 @@
+body {
+    font-size: 60px;
+}
+
+.title-container {
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 70px;
+}
+
+#glasses-img {
+    content: url('../image/glasses.png');
+    width: 200px;
+    margin-top: -28px;
+    float: left;
+}
+
+#title-img {
+    content: url('../image/title.png');
+    width: 400px;
+}
+
+.time-container {
+    margin-top: 70px;
+}
+
+#hour, #minute {
+    width: 80px;
+    height: 60px;
+    font-size: 50px;
+    float: left;
+}
+
+#time {
+    float: left;
+    padding: 15px;
+    margin-top: -30px
+}
+
+#set {
+    position: relative;
+    top: -30px;
+}
+
+#stop {
+    position: relative;
+    top: -20px;
+}
+
+.container {
+    text-align: center;
+    clear: both;
+}
