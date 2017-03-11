@@ -16,7 +16,8 @@
       var date = new Date();
       var hour = date.getHours();
       var minute = date.getMinutes();
-      $(".time").html(hour + ":" + minute);
+      $("#hour").val(hour);
+      $("#minute").val(minute);
     }
 
     function setAlerm()
