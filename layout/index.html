@@ -7,6 +7,62 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    var mail_timer_id;
+    var audio;
+
+    function setAlerm()
+    {
+      var hour = $("#hour").val();
+      var minute = $("#minute").val();
+
+      $(".time").html(hour + ":" + minute);
+      setTimeout('checkTime()',3000)
+    }
+
+    function checkTime()
+    {
+      var date = new Date();
+      var hour = date.getHours();
+      var min = date.getMinutes();
+
+console.log(hour,min);
+
+      var check_hour = $("#hour").val();
+      var check_minute = $("#minute").val();
+
+console.log(check_hour,check_minute);
+
+      if (hour == check_hour && min == check_minute) {
+        playMusic();
+        mail_timer_id = setTimeout('sendMail()',20000);
+        return;
+      }
+      setTimeout('checkTime()',1000)
+    }
+
+    function playMusic()
+    {
+console.log('playMusic');
+      audio = new Audio();
+      audio.src = "mp3/alerm.mp3";
+      audio.play();
+    }
+
+    function sendMail()
+    {
+      // mail API叩く
+console.log('sendMail');
+      audio.pause();
+    }
+
+    function stopAlerm()
+    {
+console.log('stopAlerm');
+      clearTimeout(mail_timer_id);
+      audio.pause();
+    }
+  </script>
 </head>
 <body>
   <div class="title-container">
@@ -19,9 +75,9 @@
     <input type="text" name="minute" id="minute" class="form-control" />
   </div>
   <div class="container">
-    <input type="submit" name="set" id="set" value="set" class="btn btn-default" />
-    <div>07:00</div><!-- TODO ここに出力 -->
-    <input type="submit" name="stop" id="stop" value="stop" class="btn btn-default" />
+    <input type="submit" name="set" id="set" value="set" class="btn btn-default" onclick="setAlerm()" />
+    <div class="time">07:00</div><!-- TODO ここに出力 -->
+    <input type="submit" name="stop" id="stop" value="stop" class="btn btn-default" onclick="stopAlerm()" />
   </div>
 </body>
 </html>
